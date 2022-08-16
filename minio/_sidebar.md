@@ -1,2 +1,1 @@
-* [Home](./ "Minio")
-* [Guide](./guide.md "Minio - Guide")
+- [快速开始](/minio/ "Minio")

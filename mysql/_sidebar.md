@@ -1,2 +1,1 @@
-* [Home](./ "Mysql")
-* [Guide](./guide.md "Mysql - Guide")
+- [快速开始](/mysql/ "Mysql")
