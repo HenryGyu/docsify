@@ -11,8 +11,9 @@
       https://www.jsdelivr.com/package/npm/docsify
       https://www.jsdelivr.com/package/npm/docsify-copy-code
       https://www.jsdelivr.com/package/npm/gitalk
+      https://www.jsdelivr.com/package/npm/docsify-sidebar-collapse
    -->
-  <link rel="stylesheet" href="cdn/npm/docsify@4.12.2/lib/themes/vue.css">
+  <link rel="stylesheet" href="cdn/npm/docsify/lib/themes/vue.css">
 </head>
 <body>
 <div id="app">Loading...</div>
@@ -22,19 +23,27 @@
     name: 'Document',
     nameLink: '/',
     repo: 'https://github.com/docsifyjs/docsify/',
-    relativePath: true,
     coverpage: true,
     loadNavbar: true,
     loadSidebar: true,
-    subMaxLevel: 3,
+    // subMaxLevel: 3,
+    // relativePath: true,
     notFoundPage: true,
+    search: 'auto',
   }
 </script>
 <!-- Docsify v4 -->
-<script src="cdn/npm/docsify@4.12.2/lib/docsify.min.js"></script>
+<script src="cdn/npm/docsify/lib/docsify.min.js"></script>
+
+<!-- 全文搜索 -->
+<script src="cdn/npm/docsify/lib/plugins/search.min.js"></script>
 
 <!-- emoji解析 -->
-<script src="cdn/npm/docsify@4.12.2/lib/plugins/emoji.min.js"></script>
+<script src="cdn/npm/docsify/lib/plugins/emoji.min.js"></script>
+
+<!-- 侧边栏样式，侧边栏折叠 -->
+<link rel="stylesheet" href="cdn/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css"/>
+<script src="cdn/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
 <!-- 代码高亮
   默认支持的语言，参见：https://prismjs.com/#supported-languages
@@ -42,12 +51,12 @@
 <!-- <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script> -->
 
 <!-- 在所有的代码块上添加一个简单的Click to copy按钮 -->
-<script src="cdn/npm/docsify-copy-code@2.1.1/dist/docsify-copy-code.min.js"></script>
+<script src="cdn/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 
 <!-- Gitalk -->
-<link rel="stylesheet" href="cdn/npm/gitalk@1.7.2/dist/gitalk.css">
-<script src="cdn/npm/docsify@4.12.2/lib/plugins/gitalk.min.js"></script>
-<script src="cdn/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<link rel="stylesheet" href="cdn/npm/gitalk/dist/gitalk.css">
+<script src="cdn/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="cdn/npm/gitalk/dist/gitalk.min.js"></script>
 <script>
   const gitalk = new Gitalk({
     clientID: 'c9f95937403da31c02ad',

@@ -1,4 +1,5 @@
 * [首页](/)
+* [Linux](/linux/)
 * [Docker](/docker/)
 * [Mysql](/mysql/)
 * [Minio](/minio/)

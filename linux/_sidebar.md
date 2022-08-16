@@ -1,0 +1,7 @@
+- [快速开始](/linux/ "Linux")
+- 附录
+  - 环境搭建
+    - [查看及修改主机名](/linux/doc/查看及修改主机名.md)
+    - [命令行终端设置tab补全及路径不区分大小写](/linux/doc/命令行终端设置tab补全及路径不区分大小写.md)
+    - [关闭防火墙和SELinux](/linux/doc/关闭防火墙和SELinux.md)
+    - [设置开机自启动](/linux/doc/设置开机自启动.md)
