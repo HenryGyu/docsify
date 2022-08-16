@@ -65,7 +65,7 @@
     repo: 'docsify',
     owner: 'HenryGyu',
     admin: ['HenryGyu'],
-    id: location.hash === "" ? "/" : location.hash.match(/#(.*?)([?]|$)/)[1],
+    id: location.hash === "" ? "/" : decodeURIComponent(location.hash.match(/#(.*?)([?]|$)/)[1]),
     // 评论排序方向 first/last
     pagerDirection: 'last',
     // 手动创建Issues
