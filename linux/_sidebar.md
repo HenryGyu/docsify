@@ -4,4 +4,5 @@
   - [命令行终端设置tab补全及路径不区分大小写](/linux/doc/命令行终端设置tab补全及路径不区分大小写.md)
   - [关闭防火墙和SELinux](/linux/doc/关闭防火墙和SELinux.md)
   - [设置开机自启动](/linux/doc/设置开机自启动.md)
+  - [进程后台运行的几种方式](/linux/doc/进程后台运行的几种方式.md)
 - 附录
