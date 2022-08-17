@@ -5,7 +5,7 @@
 
 `tar` 命令可用于将多个文件和目录一起打包成一个文件，但不压缩。如果要压缩，可以使用 `gzip`、`bzip2` 这样的压缩工具。
 
-![图片](../_media/Snipaste_2022-08-17_11-47-56.png ':size=80%')
+![图片](../_media/Snipaste_2022-08-17_11-47-56.jpg ':size=80%')
 
 语法
 ---
@@ -50,7 +50,7 @@ tar -cvf tar包名 待压缩的文件或目录
 tar -cvf test.tar
 ```
 
-![图片](../_media/Snipaste_2022-08-17_11-50-38.png ':size=80%')
+![图片](../_media/Snipaste_2022-08-17_11-50-38.jpg ':size=80%')
 
 > 注：`-c` 表示创建压缩文件；`-v` 表示显示压缩过程；`-f` 放在最后一位，表示要压缩的包的名称。
 
@@ -65,7 +65,7 @@ tar -tvf tar包名
 tar -tvf test.tar
 ```
 
-![在这里插入图片描述](../_media/Snipaste_2022-08-17_11-56-05.png ':size=80%')
+![在这里插入图片描述](../_media/Snipaste_2022-08-17_11-56-05.jpg ':size=80%')
 
 #### 追加文件到 `tar` 包中
 
@@ -78,7 +78,7 @@ tar -rvf tar包名 待追加文件
 tar -rvf test.tar 123.log
 ```
 
-![图片](../_media/Snipaste_2022-08-17_11-54-11.png ':size=80%')
+![图片](../_media/Snipaste_2022-08-17_11-54-11.jpg ':size=80%')
 
 #### 解压包中文件到当前目录【★★★★★】
 
@@ -91,7 +91,7 @@ tar -xvf tar包名
 tar -xvf test.tar
 ```
 
-![图片](../_media/Snipaste_2022-08-17_11-57-23.png ':size=60%')
+![图片](../_media/Snipaste_2022-08-17_11-57-23.jpg ':size=60%')
 
 #### 解压包中文件到指定目录【★★★★★】
 
@@ -104,7 +104,7 @@ tar -xvf tar包名 -C 指定解压目录
 tar -xvf test.tar -C
 ```
 
-![图片](../_media/Snipaste_2022-08-17_11-59-54.png ':size=80%')
+![图片](../_media/Snipaste_2022-08-17_11-59-54.jpg ':size=80%')
 
 #### 使用 `gzip` 压缩打包【★★★★★】
 
@@ -117,11 +117,11 @@ tar -zcvf 压缩包名 待压缩文件或目录
 tar -zcvf test.tar.gz 123.log inputrc.sh log.txt test/
 ```
 
-![图片](../_media/Snipaste_2022-08-17_12-02-24.png ':size=80%')
+![图片](../_media/Snipaste_2022-08-17_12-02-24.jpg ':size=80%')
 
 > 注：如果要解压缩则使用 `tar -zxvf 压缩包名` 命令。
 
-![图片](../_media/Snipaste_2022-08-17_12-04-21.png ':size=60%')
+![图片](../_media/Snipaste_2022-08-17_12-04-21.jpg ':size=60%')
 
 #### 使用 `bzip2` 压缩打包
 
@@ -134,17 +134,17 @@ tar -jcvf 压缩包名 待压缩文件或目录
 tar -jcvf test.tar.bz2 123.log inputrc.sh log.txt test/
 ```
 
-![图片](../_media/Snipaste_2022-08-17_12-07-31.png ':size=80%')
+![图片](../_media/Snipaste_2022-08-17_12-07-31.jpg ':size=80%')
 
 > 注：如果要解压缩则使用 `tar -jxvf 压缩包名` 命令。
 
-![图片](../_media/Snipaste_2022-08-17_12-08-54.png  ':size=60%')
+![图片](../_media/Snipaste_2022-08-17_12-08-54.jpg  ':size=60%')
 
 #### 使用绝对路径
 
 如果我们仍然用上面的选项对绝对路径进行打包。就会报错：`tar: Removing leading /' from member names`。
 
-![图片](../_media/Snipaste_2022-08-17_12-10-18.png ':size=80%')  
+![图片](../_media/Snipaste_2022-08-17_12-10-18.jpg ':size=80%')  
 但其实压缩包是生成了的，但为了避免出现这个问题，我们可以加上 `-P` 选项，就能使用绝对路径来压缩打包了。
 
 ```
@@ -154,7 +154,7 @@ tar -zcvPf 压缩包名 待压缩文件的绝对路径
 tar -zcvPf /home/zhangsan/hello.txt.tar.gz /home/zhangsan/hello.txt
 ```
 
-![图片](../_media/Snipaste_2022-08-17_12-11-33.png ':size=80%')
+![图片](../_media/Snipaste_2022-08-17_12-11-33.jpg ':size=80%')
 
 ---
 

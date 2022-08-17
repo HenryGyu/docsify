@@ -11,7 +11,7 @@ sudo vim /etc/apt/sources.list
 
 > 2. 将文件中所有的 http://cn.archive.ubuntu.com 更换为 `阿里源` http://mirrors.aliyun.com/ubuntu/  
 
-![图片](../_media/Snipaste_2022-08-17_13-00-06.png ':size=80%')  
+![图片](../_media/Snipaste_2022-08-17_13-00-06.jpg ':size=80%')  
 
 > 3. 执行系统更新
 
