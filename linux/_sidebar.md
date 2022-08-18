@@ -1,6 +1,6 @@
 - [快速开始](/linux/ "Linux")
 - 环境搭建
-  - [ubuntu服务器允许Root用户登录](/linux/doc/ubuntu服务器允许Root用户登录.md)
+  - [服务器允许Root用户登录](/linux/doc/服务器允许Root用户登录.md)
   - [修改ubuntu系统镜像源](/linux/doc/修改ubuntu系统镜像源.md)
   - [查看及修改主机名](/linux/doc/查看及修改主机名.md)
   - [命令行终端设置tab补全及路径不区分大小写](/linux/doc/命令行终端设置tab补全及路径不区分大小写.md)
