@@ -1,6 +1,6 @@
 # 关闭防火墙和SELinux
 
-> ### 防火墙（firewalld）
+### 防火墙（firewalld）
 
 ```shell
 # 临时关闭防火墙
@@ -21,9 +21,9 @@ systemctl status firewalld
 
 ---
 
-> ### SELinux
+### SELinux
 
-<font color='red'> 需安装了selinux-utils，才可以设置。没有该软件包，则无需设置。</font>
+!> 需安装了selinux-utils，才可以设置。没有该软件包，则无需设置。
 
 ```shell
 # 临时关闭SELinux
