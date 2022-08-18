@@ -6,5 +6,6 @@
   - [关闭防火墙和SELinux](/linux/doc/关闭防火墙和SELinux.md)
   - [设置开机自启动](/linux/doc/设置开机自启动.md)
   - [进程后台运行的几种方式](/linux/doc/进程后台运行的几种方式.md)
+  - [目录软链接](/linux/doc/目录软链接.md)
   - [文件及文件夹打包tar](/linux/doc/文件及文件夹打包tar.md)
 - 附录
