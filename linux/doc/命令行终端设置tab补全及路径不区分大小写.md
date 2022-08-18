@@ -10,7 +10,6 @@ apt install bash-completion
 
 ---
 
-
 ### 2. 设置路径不区分大小写
 **编辑文件**
 
@@ -23,6 +22,8 @@ vim /etc/inputrc
 ```shell
 set completion-ignore-case on
 ```
+
+---
 
 ### 3. 重启
 
