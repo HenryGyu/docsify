@@ -10,5 +10,6 @@
   - [目录软链接](/linux/doc/目录软链接.md)
   - [文件及文件夹打包tar](/linux/doc/文件及文件夹打包tar.md)
   - [解决由于CRLF导致shell脚本无法运行](/linux/doc/解决由于CRLF导致shell脚本无法运行.md)
+  - [网络代理客户端之clash](/linux/doc/网络代理客户端之clash.md)
   - [命令行设置网络代理](/linux/doc/命令行设置网络代理.md)
 - 附录
