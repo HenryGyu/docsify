@@ -12,4 +12,5 @@
   - [解决由于CRLF导致shell脚本无法运行](/linux/doc/解决由于CRLF导致shell脚本无法运行.md)
   - [网络代理客户端之clash](/linux/doc/网络代理客户端之clash.md)
   - [命令行设置网络代理](/linux/doc/命令行设置网络代理.md)
+  - [创建用户并指定文件夹读写权限](/linux/doc/创建用户并指定文件夹读写权限.md)
 - 附录
