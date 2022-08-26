@@ -2,7 +2,6 @@
 
 1. [问题来源](#问题来源)
 2. [解决方法](#解决方法)
-3. [Git配置](#Git配置)
 
 在Windows下编辑的shell脚本在写入时默认的换行符为CRLF，而在Linux中换行符为LF，这可能导致在Windows下编辑的脚本在Linux下运行报错。
 
@@ -67,43 +66,6 @@
 首先可以使用apt或者yum安装dos2unix；  
 关于dos2unix命令，参见：[dos2unix命令](https://www.jianshu.com/p/d2e96b2ccab9)  
 最简单的用法就是dos2unix直接跟上文件名：`dos2unix file`
-
-* * *
-
-### [](#Git配置 "Git配置")Git配置
-
-windows平台下使用git add等命令时也经常出现`“warning: LF will be replaced by CRLF”` 的提示，这其实就是Git帮助你解决的跨平台的换行问题；
-
-在Git中，可以通过以下命令来显示当前你的Git中采取哪种方式对待换行符：
-
-```shell
-git config core.autocrlf
-```
-
-此命令会有三种输出:
-
-| **输出** | **说明** |
-| :-- | :-- |
-| **true** | Git会将你add的所有文件视为文本文件，将结尾的CRLF转换为LF。而checkout时会再将文件的LF格式转为CRLF格式 |
-| **false** | 对文件不做任何改变，文本文件保持其原来的样子 |
-| **input** | add时Git会把CRLF转换为LF，而check时仍旧为LF。Windows操作系统不建议设置此值 |
-
-!> **当core.autocrlf为true时，还有一个需要慎重的地方：**  
-**当你上传一个二进制文件，Git可能会将二进制文件误以为是文本文件，从而也会修改你的二进制文件，从而产生隐患**
-
-可以通过`git config –global key value`的方式修改该全局配置，如:
-
-```shell
-git config --global core.autocrlf true
-```
-
-!> **将core.autocrlf设为false即可解决这个Warning, 如果你和你的伙伴只工作于Windows平台或者Linux平台，那么没问题；**  
-**不过如果是存在跨平台的现象的话，就很有可能会出现问题！**
-
-Git 的 Windows 客户端基本都会默认设置 `core.autocrlf=true`，只要保持工作区都是纯 CRLF 文件，编辑器用 CRLF 换行，就不会出现警告了；  
-Linux 最好不要设置 core.autocrlf，因为这个配置算是为 Windows 平台定制；  
-Windows 上设置 core.autocrlf=false，Git仓库也没有配置 .gitattributes，
-就会很容易引入 CRLF 或者混合换行符（一个文件里既有 LF 又有CRLF）到Git仓库中，这样就可能产生各种奇怪的问题。
 
 * * *
 

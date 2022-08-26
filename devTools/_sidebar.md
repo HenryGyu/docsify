@@ -1,6 +1,7 @@
 - [快速开始](/devTools/ "DevTools")
 - Git
   - [Git简单生成生成公钥和私钥方法](/devTools/doc/Git简单生成生成公钥和私钥方法.md)
+  - [Git中关于换行符CRLF和LF的探究](/devTools/doc/Git中关于换行符CRLF和LF的探究.md)
   - 附录
     - [廖雪峰 Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
 - Gitlab
