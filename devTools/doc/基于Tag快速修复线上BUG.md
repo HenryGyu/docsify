@@ -3,27 +3,27 @@
 - 假设你是在本地dev分支开发，先将本地未完成的任务暂存
 
 ```shell
-$ git stash
+git stash
 ```
 
 - 基于指定tag版本创建一个分支
 
 ```shell
-$ git checkout -b fix-branch api-v4.3.69
+git checkout -b fix-branch api-v4.3.69
 ```
 
 - 执行增删改文件...
 
 ```shell
-$ git add .
+git add .
 # (此处省略各种操作...)
-$ git commit -m “紧急修复说明”
+git commit -m “紧急修复说明”
 ```
 
 - 将本地最新代码发布成tag版本
 
 ```shell
-$ git tag api-v4.3.69-fix
+git tag api-v4.3.69-fix
 ```
 
 - 将本地tag版本推送到远程
