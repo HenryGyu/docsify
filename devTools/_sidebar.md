@@ -7,4 +7,3 @@
   - [基于Tag快速修复线上BUG](/devTools/doc/基于Tag快速修复线上BUG.md)
   - 附录
     - [廖雪峰 Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
-- Gitlab
