@@ -1,5 +1,6 @@
 - [快速开始](/devTools/ "DevTools")
 - Git
+  - [linux下git的升级或安装](/devTools/doc/linux下git的升级或安装.md) 
   - [Git简单生成生成公钥和私钥方法](/devTools/doc/Git简单生成生成公钥和私钥方法.md)
   - [Git中关于换行符CRLF和LF的探究](/devTools/doc/Git中关于换行符CRLF和LF的探究.md)
   - [Git经典操作场景](/devTools/doc/Git经典操作场景.md)
