@@ -2,7 +2,8 @@
 - Git
   - [Git简单生成生成公钥和私钥方法](/devTools/doc/Git简单生成生成公钥和私钥方法.md)
   - [Git中关于换行符CRLF和LF的探究](/devTools/doc/Git中关于换行符CRLF和LF的探究.md)
-  - [45个Git经典操作场景](/devTools/doc/45个Git经典操作场景.md)
+  - [Git经典操作场景](/devTools/doc/Git经典操作场景.md)
+  - [基于Tag快速修复线上BUG](/devTools/doc/基于Tag快速修复线上BUG.md)
   - 附录
     - [廖雪峰 Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
 - Gitlab

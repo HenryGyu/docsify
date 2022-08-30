@@ -1,8 +1,28 @@
-# 45个Git经典操作场景
+# Git经典操作场景
 
 **git** 对于大家应该都不太陌生，熟练使用git已经成为程序员的一项基本技能，尽管在工作中有诸如`Sourcetree`这样牛X的客户端工具，使得合并代码变的很方便。但找工作面试和一些需彰显个人实力的场景，仍然需要我们掌握足够多的git命令。
 
-下边我们整理了45个日常用git合代码的经典操作场景，基本覆盖了工作中的需求。
+下边我们整理了日常用git合代码的经典操作场景，基本覆盖了工作中的需求。
+
+<h3 style="text-align: center;color:rgb(60, 112, 198)">克隆(Clone)</h3>
+
+<h5 style="color:rgb(60, 112, 198)">克隆所有子模块</h5>
+
+```shell
+$ git clone --recursive git://github.com/foo/bar.git
+```
+
+如果已经克隆了:
+
+```shell
+$ git submodule update --init --recursive
+```
+
+<h5 style="color:rgb(60, 112, 198)">克隆指定分支，并在本地重命名</h5>
+
+```shell
+$ git clone -b <远程指定分支> <远程仓库地址> <本地文件夹名>
+```
 
 <h3 style="text-align: center;color:rgb(60, 112, 198)">提交(Commit)</h3>
 
@@ -124,6 +144,78 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 <h3 style="text-align: center;color:rgb(60, 112, 198)">暂存(Staging)</h3>
 
+<h5 style="color:rgb(60, 112, 198)">暂存所有改动</h5>
+
+暂存你工作目录下的所有改动
+
+```shell
+$ git stash
+```
+
+你可以使用`-u`来排除一些文件
+
+```shell
+$ git stash -u
+```
+
+<h5 style="color:rgb(60, 112, 198)">暂存指定文件</h5>
+
+假设你只想暂存某一个文件
+
+```shell
+$ git stash push working-directory-path/filename.ext
+```
+
+假设你想暂存多个文件
+
+```shell
+$ git stash push working-directory-path/filename1.ext working-directory-path/filename2.ext
+```
+
+<h5 style="color:rgb(60, 112, 198)">暂存时记录消息</h5>
+
+这样你可以在`list`时看到它
+
+```shell
+$ git stash save <message>
+```
+
+或
+
+```shell
+$ git stash push -m <message>
+```
+
+<h5 style="color:rgb(60, 112, 198)">使用某个指定暂存</h5>
+
+首先你可以查看你的`stash`记录
+
+```shell
+$ git stash list
+```
+
+然后你可以`apply`某个`stash`
+
+```shell
+$ git stash apply "stash@{n}"
+```
+
+此处， 'n'是`stash`在栈中的位置，最上层的`stash`会是0
+
+除此之外，也可以使用时间标记(假如你能记得的话)。
+
+```shell
+$ git stash apply "stash@{2.hours.ago}"
+```
+
+<h5 style="color:rgb(60, 112, 198)">暂存时保留未暂存的内容</h5>
+
+你需要手动create一个`stash commit`， 然后使用`git stash store`。
+
+```shell
+$ git stash create
+$ git stash store -m "commit-message" CREATED_SHA1
+```
 
 <h5 style="color:rgb(60, 112, 198)">我需要把暂存的内容添加到上一次的提交(commit)</h5>
 
@@ -164,7 +256,6 @@ $ git stash pop --index 0
 ```
 
 注意1: 这里使用`pop`仅仅是因为想尽可能保持幂等。注意2: 假如你不加上`--index`你会把暂存的文件标记为为存储。
-
 
 <h3 style="text-align: center;color:rgb(60, 112, 198)">未暂存(Unstaged)的内容</h3>
 
@@ -737,107 +828,29 @@ Changes not staged for commit:
 (my-branch)$ git rebase --abort
 ```
 
+<h3 style="text-align: center;color:rgb(60, 112, 198)">标签(Tag)</h3>
 
-<h3 style="text-align: center;color:rgb(60, 112, 198)">Stash</h3>
-
-<h5 style="color:rgb(60, 112, 198)">暂存所有改动</h5>
-
-暂存你工作目录下的所有改动
-
+<h5 style="color:rgb(60, 112, 198)">查看标签列表</h5>
 ```shell
-$ git stash
+$ git tag
 ```
 
-你可以使用`-u`来排除一些文件
-
+<h5 style="color:rgb(60, 112, 198)">查看标签详情</h5>
 ```shell
-$ git stash -u
+$ git show <tag_name>
 ```
 
-<h5 style="color:rgb(60, 112, 198)">暂存指定文件</h5>
-
-假设你只想暂存某一个文件
-
+<h5 style="color:rgb(60, 112, 198)">删除指定标签</h5>
 ```shell
-$ git stash push working-directory-path/filename.ext
-```
-
-假设你想暂存多个文件
-
-```shell
-$ git stash push working-directory-path/filename1.ext working-directory-path/filename2.ext
-```
-
-<h5 style="color:rgb(60, 112, 198)">暂存时记录消息</h5>
-
-这样你可以在`list`时看到它
-
-```shell
-$ git stash save <message>
-```
-
-或
-
-```shell
-$ git stash push -m <message>
-```
-
-<h5 style="color:rgb(60, 112, 198)">使用某个指定暂存</h5>
-
-首先你可以查看你的`stash`记录
-
-```shell
-$ git stash list
-```
-
-然后你可以`apply`某个`stash`
-
-```shell
-$ git stash apply "stash@{n}"
-```
-
-此处， 'n'是`stash`在栈中的位置，最上层的`stash`会是0
-
-除此之外，也可以使用时间标记(假如你能记得的话)。
-
-```shell
-$ git stash apply "stash@{2.hours.ago}"
-```
-
-<h5 style="color:rgb(60, 112, 198)">暂存时保留未暂存的内容</h5>
-
-你需要手动create一个`stash commit`， 然后使用`git stash store`。
-
-```shell
-$ git stash create
-$ git stash store -m "commit-message" CREATED_SHA1
-```
-
-<h3 style="text-align: center;color:rgb(60, 112, 198)">杂项(Miscellaneous Objects)</h3>
-
-<h5 style="color:rgb(60, 112, 198)">克隆所有子模块</h5>
-
-```shell
-$ git clone --recursive git://github.com/foo/bar.git
-```
-
-如果已经克隆了:
-
-```shell
-$ git submodule update --init --recursive
-```
-
-<h5 style="color:rgb(60, 112, 198)">克隆指定分支，并在本地重命名</h5>
-
-```shell
-$ git clone -b <远程指定分支> <远程仓库地址> <本地文件夹名>
-```
-
-<h5 style="color:rgb(60, 112, 198)">删除标签(tag)</h5>
-
-```shell
-$ git tag -d <tag_name>  
+# 删除本地
+$ git tag -d <tag_name>
+# 同步删除远程
 $ git push <remote> :refs/tags/<tag_name>
+```
+
+<h5 style="color:rgb(60, 112, 198)">删除所有本地Tag</h5>
+```shell
+$ git tag -l | xargs git tag -d
 ```
 
 <h5 style="color:rgb(60, 112, 198)">恢复已删除标签(tag)</h5>
@@ -855,12 +868,6 @@ $ git update-ref refs/tags/<tag_name> <hash>
 ```
 
 这时你的标签(tag)应该已经恢复了。
-
-<h5 style="color:rgb(60, 112, 198)">已删除补丁(patch)</h5>
-
-如果某人在 GitHub 上给你发了一个`pull request`, 但是然后他删除了他自己的原始 fork, 你将没法克隆他们的提交(commit)或使用`git am`。在这种情况下, 最好手动的查看他们的提交(commit)，并把它们拷贝到一个本地新分支，然后做提交。
-
-做完提交后, 再修改作者，参见变更作者。然后, 应用变化, 再发起一个新的`pull request`。
 
 <h3 style="text-align: center;color:rgb(60, 112, 198)">跟踪文件(Tracking Files)</h3>
 
