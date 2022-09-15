@@ -3,3 +3,4 @@
 * [DevTools](/devTools/)
 * [Mysql](/mysql/)
 * [Minio](/minio/)
+* [云平台文档](/云平台文档.md)
