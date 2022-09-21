@@ -10,6 +10,10 @@
 - Jdk
   - [Linux安装JDK](/devTools/doc/Linux安装JDK.md) 
   - [Mac安装JDK](/devTools/doc/Mac安装JDK.md) 
+  - 附录
+    - [Java Archive | Oracle](https://www.oracle.com/java/technologies/downloads/archive/)
 - Maven
   - [Linux安装Maven](/devTools/doc/Linux安装Maven.md)
   - [Mac安装Maven](/devTools/doc/Mac安装Maven.md) 
+  - 附录
+    - [Maven Repository](https://mvnrepository.com/)
