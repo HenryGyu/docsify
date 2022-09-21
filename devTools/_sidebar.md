@@ -7,3 +7,6 @@
   - [基于Tag快速修复线上BUG](/devTools/doc/基于Tag快速修复线上BUG.md)
   - 附录
     - [廖雪峰 Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
+- Jdk
+  - [Linux安装JDK](/devTools/doc/Linux安装JDK.md) 
+  - [Mac安装JDK](/devTools/doc/Mac安装JDK.md) 
