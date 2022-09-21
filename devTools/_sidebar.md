@@ -10,3 +10,6 @@
 - Jdk
   - [Linux安装JDK](/devTools/doc/Linux安装JDK.md) 
   - [Mac安装JDK](/devTools/doc/Mac安装JDK.md) 
+- Maven
+  - [Linux安装Maven](/devTools/doc/Linux安装Maven.md)
+  - [Mac安装Maven](/devTools/doc/Mac安装Maven.md) 
