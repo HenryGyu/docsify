@@ -78,6 +78,10 @@ agent.service_name=${SW_AGENT_NAME:xxx-service}
 -Dskywalking.agent.instance_name=henry-win
 # 追踪sql参数（可选参数，如果应用程序存在sql数据源配置，且需要记录sql执行参数，则可以设置该参数为true）
 -Dskywalking.plugin.jdbc.trace_sql_parameters=true
+# 设置sql参数长度（可选参数，配和trace_sql_parameters使用。如果设置为正数，db.sql.parameters则会被截断到这个长度，否则会被完全保存，这可能会导致性能问题。）
+-Dskywalking.plugin.jdbc.sql_parameters_max_length=512
+# 设置采样率（可选参数，表示在3秒内对N个TraceSegment进行采样。-1表示全部采样，改为大于0的数即可。默认情况下，负数或零表示关闭采样）
+-Dskywalking.agent.sample_n_per_3_secs=-1
 # 指定其他相关配置...
 ```
 

@@ -21,7 +21,13 @@
 - SkyWalking
   - [Skywalking环境搭建](/devTools/doc/Skywalking环境搭建.md)
   - [微服务整合Skywalking](/devTools/doc/微服务整合Skywalking.md)
+  - [Skywalking-UI和指标](/devTools/doc/Skywalking-UI和指标.md)
+  - [Skywalking自定义链路追踪](/devTools/doc/Skywalking自定义链路追踪.md)
+  - [Skywalking性能剖析](/devTools/doc/Skywalking性能剖析.md)
+  - [Skywalking忽略自定义异常](/devTools/doc/Skywalking忽略自定义异常.md)
+  - [Skywalking日志上报](/devTools/doc/Skywalking日志上报.md)
   - [Skywalking告警配置](/devTools/doc/Skywalking告警配置.md)
+  - [Skywalking动态配置](/devTools/doc/Skywalking动态配置.md)
   - 附录
     - [Skywalking官方文档](https://skywalking.apache.org/docs/main/next/readme/)
     - [Java Agent官方文档](https://skywalking.apache.org/docs/skywalking-java/next/en/setup/service-agent/java-agent/readme/)
