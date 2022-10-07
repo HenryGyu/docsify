@@ -20,16 +20,18 @@
 @Slf4j
 @Service
 public class SysNoticeService extends ServiceImpl<CommSysNoticeDao, SysNoticeDO>
-  implements IService<SysNoticeDO> {
+    implements IService<SysNoticeDO> {
 
-  @Trace
-  @Tags({
-    @Tag(key = "param", value = "arg[0]"),
-    @Tag(key = "result", value = "returnedObj")
-  })
-  public SysNoticeVO getById(Long id) {
-    return SysNoticeConverter.INSTANCE.do2Vo(super.getById(id));
-  }
+    @Trace
+    @Tags({
+      @Tag(key = "param", value = "arg[0]"),
+      @Tag(key = "result", value = "returnedObj")
+    })
+    public SysNoticeVO getById(Long id) {
+        // 还可以获取全局追踪Id
+        // String traceId = TraceContext.traceId();
+        return SysNoticeConverter.INSTANCE.do2Vo(super.getById(id));
+    }
 }
 ```
 
