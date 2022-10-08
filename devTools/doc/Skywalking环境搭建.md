@@ -51,7 +51,7 @@ docker run --name skywalking-oap \
 >
 > **挂载扩展jar包目录：`-v ${cur_dir}/conf/ext-libs:/skywalking/ext-libs`**
 > 
-> 例如，当Skywalking采用Mysql作为存储层的时候，需要将mysql的连接驱动放在改目录下，否则启动会报错。
+> 例如，当Skywalking采用Mysql作为存储层的时候，需要将mysql连接驱动的jar放在该目录下，否则启动会报错。
 >
 > * * *
 >
