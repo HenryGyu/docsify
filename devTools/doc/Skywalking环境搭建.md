@@ -115,8 +115,8 @@ docker run --name skywalking-ui \
 下载地址：https://www.apache.org/dyn/closer.cgi/skywalking/9.2.0/apache-skywalking-apm-9.2.0.tar.gz
 
 下载之后，解压。进入`bin`目录下，会看到对应的启动脚本，windows的脚本后缀都是`.bat`，脚本如下：
-- `oapService.bat`: 启动skywalking-oap-server
-- `oapServiceInit.bat`: 启动skywalking-oap-server并执行初始化
+- `oapService.bat`: 启动skywalking-oap-server并执行初始化
+- `oapServiceInit.bat`: 启动skywalking-oap-server并执行初始化，初始化完成后，oap服务会自动退出
 - `oapServiceNoInit.bat`: 启动skywalking-oap-server，不执行初始化。此时需要依靠其他oap服务优先执行初始化
 - `startup.bat`: 启动skywalking-oap-server + skywalking-ui
 - `webappService.bat`: 启动skywalking-ui
