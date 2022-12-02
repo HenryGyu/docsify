@@ -14,3 +14,4 @@
   - [命令行设置网络代理](/linux/doc/命令行设置网络代理.md)
   - [创建用户并指定文件夹读写权限](/linux/doc/创建用户并指定文件夹读写权限.md)
 - 附录
+  - [Frp官方文档](https://gofrp.org/docs/overview/)
