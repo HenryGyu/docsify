@@ -31,3 +31,5 @@
   - 附录
     - [Skywalking官方文档](https://skywalking.apache.org/docs/main/next/readme/)
     - [Java Agent官方文档](https://skywalking.apache.org/docs/skywalking-java/next/en/setup/service-agent/java-agent/readme/)
+- Frp
+  - [将frpc注册成windows系统服务](/devTools/doc/将frpc注册成windows系统服务.md)
