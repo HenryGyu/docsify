@@ -34,5 +34,6 @@
     - [Java Agent官方文档](https://skywalking.apache.org/docs/skywalking-java/next/en/setup/service-agent/java-agent/readme/)
 - ELK
   - [Filebeat模块与配置](/devTools/doc/Filebeat模块与配置.md)
+  - [Filebeat的一些重要配置](/devTools/doc/Filebeat的一些重要配置.md)
 - Frp
   - [将frpc注册成windows系统服务](/devTools/doc/将frpc注册成windows系统服务.md)
