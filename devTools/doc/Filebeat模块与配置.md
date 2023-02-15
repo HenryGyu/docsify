@@ -905,13 +905,13 @@ X-Pack监控使得可以很容易从Kibana监控Filebeat。
 第2步：在Filebeat配置文件中添加xpack.monitoring设置。如果你配置了Elasticsearch输出，指定下面最小的配置：
 
 ```
-xpack.monitoring.enabled: true
+monitoring.enabled: true
 ```
 
 如果你配置的是其它输出，比如Logstash，那么你必须指定一些额外的配置项。例如：
 
 ```
-xpack.monitoring:
+monitoring:
   enabled: true
   elasticsearch:
     hosts: ["https://example.com:9200", "https://example2.com:9200"]
@@ -921,9 +921,11 @@ xpack.monitoring:
 
 （注意：目前，你必须将监视数据发送到与所有其他事件相同的集群。如果你配置了Elasticsearch输出，请不要在监视配置中指定其他主机。）
 
-第3步：在Kibana中配置监控
+第3步：在Kibana中查看监控
 
-第4步：在Kibana中查看监控
+![](../_media/7932e3bd62114aef825bda53609cd133.png ':size=60%')
+
+![](../_media/b8d4123383ef4fe7992d79e9f6834c38.png ':size=60%')
 
 ## 开始使用Filebeat
 
