@@ -29,7 +29,7 @@ SkyWalking UI（普通服务 -> 服务）
 
 *   顶部控制栏
 
-    _![图片](../_media/Snipaste_2022-10-07_09-16-17.png ':size=100%')
+    ![](../_media/Snipaste_2022-10-07_09-16-17.png ':size=100%')
 
   *   Service（服务列表）：正在通过agent收集指标的服务列表
   *   Topology（拓扑图）：以拓扑图的方式展现服务的关系
@@ -47,7 +47,7 @@ SkyWalking UI（普通服务 -> 服务）
   
 *   Service Overview：服务概览
 
-    _![图片](../_media/Snipaste_2022-10-07_09-30-35.png ':size=100%')
+    ![](../_media/Snipaste_2022-10-07_09-30-35.png ':size=100%')
 
   *   Service Apdex（数字）:当前服务的评分
   *   Success Rate（百分比）:请求成功率
@@ -68,7 +68,7 @@ SkyWalking UI（普通服务 -> 服务）
 
 *   Service Instance：服务实例列表
 
-    _![图片](../_media/Snipaste_2022-10-07_09-48-58.png ':size=100%')
+    ![](../_media/Snipaste_2022-10-07_09-48-58.png ':size=100%')
 
   *   Service Instances：服务实例名称
   *   Load(calls / min): 每分钟请求数
@@ -78,7 +78,7 @@ SkyWalking UI（普通服务 -> 服务）
 
 *   Service Instance Overview：服务实例概览
 
-    _![图片](../_media/Snipaste_2022-10-07_09-56-46.png ':size=100%')
+    ![](../_media/Snipaste_2022-10-07_09-56-46.png ':size=100%')
 
   *   Service instance load（折线图）：当前服务实例，每个时间段的每分钟请求数
   *   Service Instance Success Rate（折线图）：当前服务实例，每个时间段的请求成功率
@@ -88,15 +88,15 @@ SkyWalking UI（普通服务 -> 服务）
 
 *   Service Instance Trace：服务实例追踪
 
-    _![图片](../_media/Snipaste_2022-10-07_10-39-03.png ':size=100%')
+    ![](../_media/Snipaste_2022-10-07_10-39-03.png ':size=100%')
 
-    _![图片](../_media/Snipaste_2022-10-07_10-41-43.png ':size=100%')
+    ![](../_media/Snipaste_2022-10-07_10-41-43.png ':size=100%')
 
-    _![图片](../_media/Snipaste_2022-10-07_10-44-19.png ':size=100%')
+    ![](../_media/Snipaste_2022-10-07_10-44-19.png ':size=100%')
 
 *   Service Instance JVM：服务实例JVM信息
 
-    _![图片](../_media/Snipaste_2022-10-07_10-23-20.png ':size=100%')
+    ![](../_media/Snipaste_2022-10-07_10-23-20.png ':size=100%')
 
   *   JVM CPU（折线图）：jvm占用CPU的百分比
   *   JVM Memory（折线图）：JVM内存占用大小，单位mb（点击切换，可查看heap内存，noheap内存等信息）
@@ -108,7 +108,7 @@ SkyWalking UI（普通服务 -> 服务）
 
 * Service Endpoint：服务端点列表
 
-  _![图片](../_media/Snipaste_2022-10-07_10-51-59.png ':size=100%')
+  ![](../_media/Snipaste_2022-10-07_10-51-59.png ':size=100%')
 
   *   Endpoints：端点名称
   *   Load(calls / min): 每分钟请求数
@@ -117,7 +117,7 @@ SkyWalking UI（普通服务 -> 服务）
 
 * Service Endpoint Overview：服务端点概览
 
-  _![图片](../_media/Snipaste_2022-10-07_10-56-27.png ':size=100%')
+  ![](../_media/Snipaste_2022-10-07_10-56-27.png ':size=100%')
 
   *   Endpoint Load（折线图）：端点的每分钟请求数
   *   Endpoint Avg Response Time（折线图）：端点每个时间段的平均请求响应时间
@@ -129,23 +129,23 @@ SkyWalking UI（普通服务 -> 服务）
 * Service Endpoint Trace：服务端点追踪
 
   记录了端点的所有请求记录，具体信息和上面将的 Service Instance Trace：服务实例追踪。一样，此处不再阐述。
-  _![图片](../_media/Snipaste_2022-10-07_11-16-30.png ':size=100%')
+  ![](../_media/Snipaste_2022-10-07_11-16-30.png ':size=100%')
 
 * Topology：拓扑图
 
   记录了服务间的关系和连接情况，红色方块代表不正常的服务，可以从这里点击某个服务，进去对应的Dashboard，查看具体的信息
-  _![图片](../_media/Snipaste_2022-10-07_11-24-48.png ':size=100%')
+  ![](../_media/Snipaste_2022-10-07_11-24-48.png ':size=100%')
 
 * 其他相关信息
 
-  _![图片](../_media/Snipaste_2022-10-07_11-31-27.png ':size=100%')
+  ![](../_media/Snipaste_2022-10-07_11-31-27.png ':size=100%')
 
 SkyWalking UI（普通服务 -> 虚拟数据库）
 ----------------------------------------------------------
 
 *   Virtual Database：虚拟数据库列表
 
-    _![图片](../_media/Snipaste_2022-10-07_11-34-48.png ':size=100%')
+    ![](../_media/Snipaste_2022-10-07_11-34-48.png ':size=100%')
 
   *   SkyWalking会通过agent推测我们程序连接的数据库信息，并进行监控
   *   Service Names：数据库连接名
@@ -155,7 +155,7 @@ SkyWalking UI（普通服务 -> 虚拟数据库）
 
 *   Virtual-Database-Service：虚拟数据库详情
 
-    _![图片](../_media/Snipaste_2022-10-07_11-39-52.png ':size=100%')
+    ![](../_media/Snipaste_2022-10-07_11-39-52.png ':size=100%')
 
   *   Database Avg Response Time（折线图）：数据库每个时间段的平均请求响应时间
   *   Database Access Successful Rate（折线图）：数据库每个时间段的请求成功率

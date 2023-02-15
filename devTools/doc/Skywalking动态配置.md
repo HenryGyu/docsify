@@ -15,13 +15,13 @@ SkyWalking 支持以下动态配置
 
 通过debug源码发现，配置模块会启动一个定时任务，默认60s向配置中心拉取一次配置  
 `org.apache.skywalking.oap.server.configuration.api.ConfigWatcherRegister#start`  
-_![图片](../_media/04639efa538a40e4b3a615217869479a.png ':size=100%')  
+![](../_media/04639efa538a40e4b3a615217869479a.png ':size=100%')  
 默认未覆盖动态配置时，对应 `config key` 的值为空  
 `org.apache.skywalking.oap.server.configuration.nacos.NacosConfigWatcherRegister#readConfig`  
-_![图片](../_media/8101be4b5b1440518eb832c7f04b3e61.png ':size=100%')
+![](../_media/8101be4b5b1440518eb832c7f04b3e61.png ':size=100%')
 
 ##### 覆盖数据库慢语句阀值
 
-_![图片](../_media/Snipaste_2022-10-07_15-02-56.png ':size=100%')  
+![](../_media/Snipaste_2022-10-07_15-02-56.png ':size=100%')  
 再次进行源码 debug 可以发现，对应 `config key` 已经有值了  
-_![图片](../_media/f5273cfaba3e497e8ba7b59122519d41.png ':size=100%')
+![](../_media/f5273cfaba3e497e8ba7b59122519d41.png ':size=100%')

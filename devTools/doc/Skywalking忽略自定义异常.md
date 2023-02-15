@@ -8,9 +8,9 @@
 假设我们自定义的业务异常为：`com.dct.scp.common.core.exception.CustomException`,  
 当我们没有做任何设置的情况下，访问某个接口抛出该异常时，skywalking会将其标记为异常状态，并显示异常信息。
 
-_![图片](../_media/Snipaste_2022-10-07_17-13-07.png ':size=100%')
+![](../_media/Snipaste_2022-10-07_17-13-07.png ':size=100%')
 
-_![图片](../_media/Snipaste_2022-10-07_17-31-23.png ':size=100%')
+![](../_media/Snipaste_2022-10-07_17-31-23.png ':size=100%')
 
 **1. 在agent配置中设置异常类的名称**
 
@@ -29,7 +29,7 @@ _![图片](../_media/Snipaste_2022-10-07_17-31-23.png ':size=100%')
 
 此时，再去看skywalking中的链路追踪，会发现这次调用没有被标记为错误了，但异常信息仍会记录
 
-_![图片](../_media/Snipaste_2022-10-07_17-30-32.png ':size=100%')
+![](../_media/Snipaste_2022-10-07_17-30-32.png ':size=100%')
 
 **2. 在代码中使用`@IgnoredException`注解**
 

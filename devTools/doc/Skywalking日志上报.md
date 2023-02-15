@@ -38,9 +38,9 @@
 
 **3、在Skywalking-UI页面查看上传的日志**
 
-_![图片](../_media/Snipaste_2022-10-07_16-33-11.png ':size=100%')
+![](../_media/Snipaste_2022-10-07_16-33-11.png ':size=100%')
 
-_![图片](../_media/Snipaste_2022-10-07_16-33-39.png ':size=100%')
+![](../_media/Snipaste_2022-10-07_16-33-39.png ':size=100%')
 
 **4、更多配置**
 

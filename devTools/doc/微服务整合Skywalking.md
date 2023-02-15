@@ -85,11 +85,11 @@ agent.service_name=${SW_AGENT_NAME:xxx-service}
 # 指定其他相关配置...
 ```
 
-_![图片](../_media/Snipaste_2022-10-06_17-15-50.png ':size=60%')
+![](../_media/Snipaste_2022-10-06_17-15-50.png ':size=60%')
 
 此时启动每个微服务，并访问：http://127.0.0.1:8080 效果如下：
 
-_![图片](../_media/Snipaste_2022-10-06_18-13-30.png ':size=100%')
+![](../_media/Snipaste_2022-10-06_18-13-30.png ':size=100%')
 
 如果你要追踪Gateway的话，你会发现：无法通过Gateway发现路由的服务链路？
 

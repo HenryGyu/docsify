@@ -43,6 +43,6 @@ public class SysNoticeService extends ServiceImpl<CommSysNoticeDao, SysNoticeDO>
 
 **3、在Skywalking-UI页面查看**
 
-_![图片](../_media/Snipaste_2022-10-07_19-25-22.png ':size=100%')
+![](../_media/Snipaste_2022-10-07_19-25-22.png ':size=100%')
 
-_![图片](../_media/Snipaste_2022-10-07_19-29-58.png ':size=100%')
+![](../_media/Snipaste_2022-10-07_19-29-58.png ':size=100%')

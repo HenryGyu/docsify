@@ -6,14 +6,14 @@ Skywalking 在性能剖析方面非常强大，提供到基于堆栈的分析结
 
 **1. 新建任务**
 
-_![图片](../_media/Snipaste_2022-10-07_18-50-13.png ':size=100%')
+![](../_media/Snipaste_2022-10-07_18-50-13.png ':size=100%')
 
-_![图片](../_media/Snipaste_2022-10-07_18-50-43.png ':size=100%')
+![](../_media/Snipaste_2022-10-07_18-50-43.png ':size=100%')
 
 **2. 执行请求**
 
 **3. 性能剖析**
 
-_![图片](../_media/Snipaste_2022-10-07_18-51-03.png ':size=100%')
+![](../_media/Snipaste_2022-10-07_18-51-03.png ':size=100%')
 
 本文转自 [https://blog.csdn.net/weixin_40803011/article/details/126208133](https://blog.csdn.net/weixin_40803011/article/details/126208133)，如有侵权，请联系删除。
