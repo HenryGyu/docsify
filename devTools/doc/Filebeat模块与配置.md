@@ -465,7 +465,7 @@ filebeat.inputs:
 
 **close\_\***
 
-close\_\*配置项用于在一个确定的条件或者时间点之后关闭harvester。关闭harvester意味着关闭文件处理器。如果在harvester关闭以后文件被更新，那么在scan\_frequency结束后改文件将再次被拾起。然而，当harvester关闭的时候如果文件被删除或者被移动，那么Filebeat将不会被再次拾起，并且这个harvester还没有读取的数据将会丢失。
+close\_\*配置项用于在一个确定的条件或者时间点之后关闭harvester。关闭harvester意味着关闭文件处理器。如果在harvester关闭以后文件被更新，那么在scan\_frequency结束后该文件将再次被拾起。然而，当harvester关闭的时候如果文件被删除或者被移动，那么Filebeat将不会被再次拾起，并且这个harvester还没有读取的数据将会丢失。
 
 **close\_inactive**
 
@@ -517,9 +517,7 @@ Filebeat多久检查一次指定路径下的新文件（PS：检查的频率）�
 -   scan\_frequency： 它设置的是扫描文件的频率，看看文件是否更新
 -   close\_inactive：它设置的是文件如果多久没更新的话就关闭文件句柄，它是有一个倒计时，如果在倒计时期间，文件没有任何变化，则当倒计时结束的时候关闭文件句柄。不建议设置为小于1秒。
 
-如果文件句柄关了以后，文件又被更新，那么在下一个扫描周期结束的时候变化发现这个改变，于是会再次打开这个文件读取日志行，前面我们也提到过，每个文件上一次读到什么位置（偏移量）都记录在registry文件中。
-
-）
+如果文件句柄关了以后，文件又被更新，那么在下一个扫描周期结束的时候变化发现这个改变，于是会再次打开这个文件读取日志行，前面我们也提到过，每个文件上一次读到什么位置（偏移量）都记录在registry文件中。）
 
 **4.3.  管理多行消息**
 
@@ -975,7 +973,7 @@ filebeat.inputs:
 
 ![](../_media/874963-20180808182426196-188738357.png ':size=30%')
 
-那么只会抓取到2.log和3.log，而不会抓到1.log和4.log。因为/var/log/aaa/ccc/1.log和/var/log/4.log不会被抓到。
+那么只会抓取到2.log和3.log，而不会抓到1.log和4.log。因为/var/log/aaa/ccc/1.log和/var/log/4.log不会被抓到。）
 
 **2. 如果你发送输出目录到Elasticsearch（并且不用Logstash），那么设置IP地址和端口以便能够找到Elasticsearch：**
 
