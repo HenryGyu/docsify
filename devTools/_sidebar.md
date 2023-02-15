@@ -5,6 +5,7 @@
   - [Git中关于换行符CRLF和LF的探究](/devTools/doc/Git中关于换行符CRLF和LF的探究.md)
   - [Git经典操作场景](/devTools/doc/Git经典操作场景.md)
   - [基于Tag快速修复线上BUG](/devTools/doc/基于Tag快速修复线上BUG.md)
+  - [Git如何撤回已经push到远端上的代码](/devTools/doc/Git如何撤回已经push到远端上的代码.md)
   - 附录
     - [廖雪峰 Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
 - Jdk
