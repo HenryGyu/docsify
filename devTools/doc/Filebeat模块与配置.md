@@ -440,7 +440,7 @@ ignore\_decoding\_error
 
 **multiline**
 
-用于控制Filebeat如何扩多行处理日志消息
+用于控制Filebeat如何跨多行处理日志消息
 
 **exclude\_files**
 
