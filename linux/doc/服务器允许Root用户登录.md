@@ -17,3 +17,26 @@ sudo vim /etc/ssh/sshd_config后，进入配置文件中修改`PermitRootLogin`�
 ```shell
 sudo service ssh restart
 ```
+
+### 补充
+
+**ubuntu开启22端口**
+
+```shell
+# 安装 openssh
+sudo apt-get install openssh-server openssh-client
+# 启动ssh服务
+service ssh start
+# 测试
+lsof -i:22
+```
+
+**解决ubuntu图形化界面无法使用root登录**
+
+`sudo vim /etc/pam.d/gdm-autologin`\
+把文件中的 auth required pam_succeed_if.so user != root quiet_success 注释掉
+
+`vim /etc/pam.d/gdm-password`\
+把文件中的 auth required pam_succeed_if.so user != root quiet_success 注释掉
+
+最后`passwd root`重置root登录密码
