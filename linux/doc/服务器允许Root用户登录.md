@@ -36,7 +36,7 @@ lsof -i:22
 `sudo vim /etc/pam.d/gdm-autologin`\
 把文件中的 auth required pam_succeed_if.so user != root quiet_success 注释掉
 
-`vim /etc/pam.d/gdm-password`\
+`sudo vim /etc/pam.d/gdm-password`\
 把文件中的 auth required pam_succeed_if.so user != root quiet_success 注释掉
 
 最后`passwd root`重置root登录密码

@@ -9,7 +9,7 @@
 sudo vim /etc/apt/sources.list
 ```
 
-**2. 将文件中所有的 http://cn.archive.ubuntu.com 更换为 `阿里源` http://mirrors.aliyun.com/ubuntu/**
+**2. 将文件中所有的 http://cn.archive.ubuntu.com 更换为 `阿里源` http://mirrors.aliyun.com**
 
 ![图片](../_media/Snipaste_2022-08-17_13-00-06.png ':size=80%')  
 
