@@ -35,5 +35,6 @@
 - ELK
   - [Filebeat模块与配置](/devTools/doc/Filebeat模块与配置.md)
   - [Filebeat的一些重要配置](/devTools/doc/Filebeat的一些重要配置.md)
+  - [Filebeat配置说明之processors](/devTools/doc/Filebeat配置说明之processors.md)
 - Frp
   - [将frpc注册成windows系统服务](/devTools/doc/将frpc注册成windows系统服务.md)
