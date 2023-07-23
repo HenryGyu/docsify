@@ -55,7 +55,7 @@ git config --global --add safe.directory "*"
 
 **仓库过大，导致Git(拉取/推送)代码失败**
 
-处理方案：默认`git`设置`http post`的缓存为`1MB`，使用命令将`git`的缓存设为`500M`
+处理方案：默认`git`设置`http post`的缓存为`1MB`，使用命令将`git`的缓存设为`512M`
 ```shell
 git config --global http.postBuffer 524288000
 ```
