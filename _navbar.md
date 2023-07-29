@@ -4,5 +4,6 @@
 
 * [Linux](/linux/)
 * [DevTools](/devTools/)
+* [Java](/java/)
 * [Mysql](/mysql/)
 * [Minio](/minio/)

@@ -1,6 +1,6 @@
 * [首页](/)
 * [Linux](/linux/)
 * [DevTools](/devTools/)
+* [Java](/java/)
 * [Mysql](/mysql/)
 * [Minio](/minio/)
-* [云平台文档](/云平台文档.md)
