@@ -38,3 +38,15 @@ setenforce 1
 # 查看SELinux状态
 getenforce
 ```
+
+---
+
+### Swap
+
+```shell
+# 临时关闭Swap
+swapoff -a
+
+# 永久关闭Swap
+# 编辑/etc/fstab，注释掉最后一行的swap
+```
