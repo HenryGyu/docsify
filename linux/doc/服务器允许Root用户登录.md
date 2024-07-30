@@ -40,3 +40,18 @@ lsof -i:22
 把文件中的 auth required pam_succeed_if.so user != root quiet_success 注释掉
 
 最后`passwd root`重置root登录密码
+
+**设置开机自动登录root用户**
+
+```shell
+sudo vim /etc/gdm3/custom.conf
+```
+
+修改如下内容：
+
+```conf
+# 启用开机自动登录
+AutomaticLoginEnable = true
+# 指定自动登录的用户
+AutomaticLogin = root
+```
