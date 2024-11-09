@@ -19,6 +19,26 @@ git config --global user.email "邮箱"
 
 ---
 
+**免密登录及传输文件**
+
+1. 将公钥复制到目标机器
+```shell
+# 将 user 替换为目标机器上的用户名，将 machine_b_ip 替换为目标机器的IP地址。
+# 执行后，系统会提示输入目标机器的密码。成功后，就能够免密登录到目标机器。
+ssh-copy-id user@machine_b_ip
+```
+
+2. 传输文件
+```shell
+# 方式一：使用scp传输文件
+scp /path/to/file user@machine_b_ip:/path/to/destination
+
+# 方式二：使用rsync同步文件或文件夹
+rsync -avz /path/to/folder user@machine_b_ip:/path/to/destination
+```
+
+---
+
 **Git存储库遇到不安全问题**
 
 1. 使用vscode、idea等打开git存储库，遇到下面问题：
