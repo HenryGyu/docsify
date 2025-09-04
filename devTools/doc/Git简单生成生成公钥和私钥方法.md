@@ -17,7 +17,7 @@ git config --global user.email "邮箱"
 
 3. 执行查看公钥的命令：cat ~/.ssh/id_rsa.pub
 
-4. 设置专用的ssh key (可选)
+4. 设置专用的ssh key（可选）
 ```shell
 # -b 4096: 生成长度4096位的RSA密钥，安全性更好。可选，默认2048位。
 # -f ~/.ssh/id_rsa_autossh: 指定文件名，不会覆盖原来的id_rsa。
@@ -36,6 +36,9 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_autossh -C "autossh-tunnel"
 # 将 user 替换为目标机器上的用户名，将 machine_b_ip 替换为目标机器的IP地址。
 # 执行后，系统会提示输入目标机器的密码。成功后，就能够免密登录到目标机器。
 ssh-copy-id user@machine_b_ip
+
+# 如果要传输指定公钥
+ssh-copy-id -i ~/.ssh/id_rsa_autossh.pub user@machine_b_ip
 ```
 
 2. 传输文件
@@ -45,6 +48,47 @@ scp /path/to/file user@machine_b_ip:/path/to/destination
 
 # 方式二：使用rsync同步文件或文件夹
 rsync -avz /path/to/folder user@machine_b_ip:/path/to/destination
+```
+
+---
+
+**使用autossh创建SSH隧道**
+
+1. 临时创建
+```shell
+# -i ~/.ssh/id_rsa_autossh: 指定使用哪个密钥连接（可选）
+autossh -M 0 -f -N \
+  -i ~/.ssh/id_rsa_autossh \
+  -L 13306:127.0.0.1:3306 \
+  -L 16379:127.0.0.1:6379 \
+  user@machine_b_ip
+```
+
+2. 配置开机自启动文件
+`vim /etc/systemd/system/autossh-tunnel.service`
+```
+[Unit]
+Description=AutoSSH tunnel for MySQL/Redis/Nacos
+After=network.target
+
+[Service]
+User=ubuntu
+ExecStart=/usr/bin/autossh -M 0 -N \
+    -L 13306:127.0.0.1:3306 \
+    -L 16379:127.0.0.1:6379 \
+    user@machine_b_ip
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
+3. 设置开机自启动
+```shell
+sudo systemctl daemon-reload
+sudo systemctl enable autossh-tunnel
+sudo systemctl start autossh-tunnel
 ```
 
 ---
