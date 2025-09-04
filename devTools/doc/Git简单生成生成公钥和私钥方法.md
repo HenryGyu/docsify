@@ -56,9 +56,9 @@ rsync -avz /path/to/folder user@machine_b_ip:/path/to/destination
 
 1. 临时创建
 ```shell
-# -i ~/.ssh/id_rsa_autossh: 指定使用哪个密钥连接（可选）
+# -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server: 指定使用哪个密钥连接（可选）
 autossh -M 0 -f -N \
-  -i ~/.ssh/id_rsa_autossh \
+  -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server \
   -L 13306:127.0.0.1:3306 \
   -L 16379:127.0.0.1:6379 \
   user@machine_b_ip
@@ -74,6 +74,7 @@ After=network.target
 [Service]
 User=ubuntu
 ExecStart=/usr/bin/autossh -M 0 -N \
+    -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server \
     -L 13306:127.0.0.1:3306 \
     -L 16379:127.0.0.1:6379 \
     user@machine_b_ip
