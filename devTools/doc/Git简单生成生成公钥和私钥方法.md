@@ -22,9 +22,9 @@ git config --global user.email "邮箱"
 # -b 4096: 生成长度4096位的RSA密钥，安全性更好。可选，默认2048位。
 # -f ~/.ssh/id_rsa_autossh: 指定文件名，不会覆盖原来的id_rsa。
 # 生成后会得到：
-#   私钥：~/.ssh/id_rsa_autossh
-#   公钥：~/.ssh/id_rsa_autossh.pub
-ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_autossh -C "autossh-tunnel"
+#   私钥：~/.ssh/id_rsa_autossh_cnbmil-wms-server
+#   公钥：~/.ssh/id_rsa_autossh_cnbmil-wms-server.pub
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_autossh_cnbmil-wms-server -C "root@sskj-k8s-master1_autossh"
 ```
 
 ---
@@ -38,7 +38,7 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_autossh -C "autossh-tunnel"
 ssh-copy-id user@machine_b_ip
 
 # 如果要传输指定公钥
-ssh-copy-id -i ~/.ssh/id_rsa_autossh.pub user@machine_b_ip
+ssh-copy-id -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server.pub user@machine_b_ip
 ```
 
 2. 传输文件
@@ -68,7 +68,7 @@ autossh -M 0 -f -N \
 `vim /etc/systemd/system/autossh-tunnel.service`
 ```
 [Unit]
-Description=AutoSSH tunnel for MySQL/Redis/Nacos
+Description=AutoSSH tunnel for cnbmil-wms-server
 After=network.target
 
 [Service]
