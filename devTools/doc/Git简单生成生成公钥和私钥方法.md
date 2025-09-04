@@ -65,7 +65,7 @@ autossh -M 0 -f -N \
 ```
 
 2. 配置开机自启动文件
-`vim /etc/systemd/system/autossh-tunnel.service`
+`vim /etc/systemd/system/autossh_cnbmil-wms-server.service`
 ```
 [Unit]
 Description=AutoSSH tunnel for cnbmil-wms-server
@@ -88,8 +88,8 @@ WantedBy=multi-user.target
 3. 设置开机自启动
 ```shell
 sudo systemctl daemon-reload
-sudo systemctl enable autossh-tunnel
-sudo systemctl start autossh-tunnel
+sudo systemctl enable autossh_cnbmil-wms-server
+sudo systemctl start autossh_cnbmil-wms-server
 ```
 
 ---
