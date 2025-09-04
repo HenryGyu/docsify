@@ -17,6 +17,16 @@ git config --global user.email "邮箱"
 
 3. 执行查看公钥的命令：cat ~/.ssh/id_rsa.pub
 
+4. 设置专用的ssh key (可选)
+```shell
+# -b 4096: 生成长度4096位的RSA密钥，安全性更好。可选，默认2048位。
+# -f ~/.ssh/id_rsa_autossh: 指定文件名，不会覆盖原来的id_rsa。
+# 生成后会得到：
+#   私钥：~/.ssh/id_rsa_autossh
+#   公钥：~/.ssh/id_rsa_autossh.pub
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_autossh -C "autossh-tunnel"
+```
+
 ---
 
 **免密登录及传输文件**
