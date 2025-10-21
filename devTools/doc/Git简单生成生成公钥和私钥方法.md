@@ -37,8 +37,8 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_autossh_cnbmil-wms-server -C "root@ss
 # 执行后，系统会提示输入目标机器的密码。成功后，就能够免密登录到目标机器。
 ssh-copy-id user@machine_b_ip
 
-# 如果要传输指定公钥
-ssh-copy-id -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server.pub user@machine_b_ip
+# 如果要传输指定公钥，并指定目标机器的端口
+ssh-copy-id -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server.pub -p 22 user@machine_b_ip
 ```
 
 2. 传输文件
