@@ -58,6 +58,11 @@ rsync -avz /path/to/folder user@machine_b_ip:/path/to/destination
 ```shell
 # -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server: 指定使用哪个密钥连接（可选）
 # -p 22: 指定目标主机端口（可选）
+# -f: 后台运行（如果配合systemd使用，则不需要该参数，因为已经systemd负责让进程在后台运行）
+# -N: 不执行远程命令（只建立隧道）
+# -T: 不分配伪终端，纯粹地做端口转发，推荐加上（可选）
+# -M: 使用autossh自带的端口监控模式，后面跟上数字代表本地端口号，autossh会使用该端口号来测试连接
+#    （systemd模式下，推荐使用`-M 0`，表示禁用autossh自带的端口监控，然后使用ssh自带的检测机制）
 autossh -M 0 -f -N \
   -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server \
   -L 13306:127.0.0.1:3306 \
@@ -75,6 +80,8 @@ After=network.target
 [Service]
 User=ubuntu
 ExecStart=/usr/bin/autossh -M 0 -N \
+    -o "ServerAliveInterval 60" \
+    -o "ServerAliveCountMax 3" \
     -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server \
     -L 13306:127.0.0.1:3306 \
     -L 16379:127.0.0.1:6379 \
