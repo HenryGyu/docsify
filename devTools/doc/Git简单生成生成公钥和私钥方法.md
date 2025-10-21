@@ -37,7 +37,7 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_autossh_cnbmil-wms-server -C "root@ss
 # 执行后，系统会提示输入目标机器的密码。成功后，就能够免密登录到目标机器。
 ssh-copy-id user@machine_b_ip
 
-# 如果要传输指定公钥，并指定目标机器的端口
+# 如果要传输指定公钥（如果端口不是22，可以通过`-p`参数指定）
 ssh-copy-id -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server.pub -p 22 user@machine_b_ip
 ```
 
@@ -57,11 +57,12 @@ rsync -avz /path/to/folder user@machine_b_ip:/path/to/destination
 1. 临时创建
 ```shell
 # -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server: 指定使用哪个密钥连接（可选）
+# -p 22: 指定目标主机端口（可选）
 autossh -M 0 -f -N \
   -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server \
   -L 13306:127.0.0.1:3306 \
   -L 16379:127.0.0.1:6379 \
-  user@machine_b_ip
+  -p 22 user@machine_b_ip
 ```
 
 2. 配置开机自启动文件
@@ -77,7 +78,7 @@ ExecStart=/usr/bin/autossh -M 0 -N \
     -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server \
     -L 13306:127.0.0.1:3306 \
     -L 16379:127.0.0.1:6379 \
-    user@machine_b_ip
+    -p 22 user@machine_b_ip
 Restart=always
 RestartSec=10
 
