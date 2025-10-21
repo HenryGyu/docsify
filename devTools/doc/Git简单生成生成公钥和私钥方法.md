@@ -78,7 +78,6 @@ Description=AutoSSH tunnel for cnbmil-wms-server
 After=network.target
 
 [Service]
-User=ubuntu
 ExecStart=/usr/bin/autossh -M 0 -N -T \
     -o "ServerAliveInterval 60" \
     -o "ServerAliveCountMax 3" \
