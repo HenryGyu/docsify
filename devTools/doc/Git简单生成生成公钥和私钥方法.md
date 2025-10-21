@@ -82,8 +82,8 @@ ExecStart=/usr/bin/autossh -M 0 -N -T \
     -o "ServerAliveInterval 60" \
     -o "ServerAliveCountMax 3" \
     -i ~/.ssh/id_rsa_autossh_cnbmil-wms-server \
-    -L 13306:127.0.0.1:3306 \
-    -L 16379:127.0.0.1:6379 \
+    -L 0.0.0.0:13306:127.0.0.1:3306 \
+    -L 0.0.0.0:16379:127.0.0.1:6379 \
     -p 22 user@machine_b_ip
 Restart=always
 RestartSec=10
