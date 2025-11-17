@@ -60,9 +60,11 @@ tar -cvf test.tar
 
 ```
 # 语法
-tar -tvf tar包名
+tar -tf tar包名
 # 示例
-tar -tvf test.tar
+tar -tf test.tar
+# 以树形展示，并只显示前2层目录结构
+tar -tf test.tar.gz | awk -F'/' 'NF<=2'
 ```
 
 ![在这里插入图片描述](../_media/Snipaste_2022-08-17_11-56-05.png ':size=80%')
